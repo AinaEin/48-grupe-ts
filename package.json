@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "ts": "tsc --watch",
+    "dealer": "node --watch ./dist/auto/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
