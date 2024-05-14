@@ -13,6 +13,8 @@ export class Dealer {
     // 1500 -> 1.500 Eur
     // 1050 -> 1.050 Eur
     // 1005 -> 1.005 Eur
+    
+    let formattedPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     return price + " " + this.currency;
   }
 
