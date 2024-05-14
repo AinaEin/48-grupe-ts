@@ -55,4 +55,18 @@ export class Dealer {
     car.price = newPrice;
     return `New ${car.model} price is ${this.formatedPrice(newPrice)}.`;
   }
+
+    sellCar(id: number) {
+    if (id < 1) {
+      return "ERROR: id is too low.";
+    }
+    if (id > this.allCars.length) {
+      return "SORRY! There is no such car for sale :(";
+    }
+
+    const car = this.allCars[id - 1];
+    // Pašaliname automobilį iš sąrašo
+    this.allCars.splice(id - 1, 1);
+    return `Wow! ${car.model} sold for ${this.formatedPrice(car.price)}!`;
+  }
 }
